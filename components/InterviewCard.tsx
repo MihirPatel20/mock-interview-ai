@@ -55,7 +55,7 @@ const InterviewCard = ({
         </div>
 
         <div className="flex flex-row justify-between">
-          <DisplayTechIcons techstack={techstack}/>
+          <DisplayTechIcons techstack={techstack} />
 
           <Button className="btn-primary">
             <Link
