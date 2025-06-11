@@ -1,7 +1,7 @@
-import { cn, getTechLogos } from '@/lib/utils';
-import { Slice } from 'lucide-react';
-import Image from 'next/image';
-import React from 'react';
+import { cn, getTechLogos } from "@/lib/utils";
+import { Slice } from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 const DisplayTechIcons = async ({ techstack }: TechIconProps) => {
   const techIcons = await getTechLogos(techstack);
@@ -11,8 +11,8 @@ const DisplayTechIcons = async ({ techstack }: TechIconProps) => {
         <div
           key={tech}
           className={cn(
-            'relative group bg-dark-300 rounded-full p-2 flex-center',
-            index >= 1 && '-ml-3'
+            "relative group bg-dark-300 rounded-full p-2 flex-center",
+            index >= 1 && "-ml-3"
           )}
         >
           <span className="tech-tooltip">{tech}</span>
