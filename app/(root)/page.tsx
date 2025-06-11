@@ -1,9 +1,9 @@
-import InterviewCard from '@/components/InterviewCard';
-import { Button } from '@/components/ui/button';
-import { dummyInterviews } from '@/constants';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import InterviewCard from "@/components/InterviewCard";
+import { Button } from "@/components/ui/button";
+import { dummyInterviews } from "@/constants";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const Page = () => {
   return (
