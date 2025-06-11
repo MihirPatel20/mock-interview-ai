@@ -1,9 +1,9 @@
-import dayjs from 'dayjs';
-import Image from 'next/image';
-import { Button } from './ui/button';
-import Link from 'next/link';
-import { getRandomInterviewCover } from '@/lib/utils';
-import DisplayTechIcons from './DisplayTechIcons';
+import dayjs from "dayjs";
+import Image from "next/image";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { getRandomInterviewCover } from "@/lib/utils";
+import DisplayTechIcons from "./DisplayTechIcons";
 
 const InterviewCard = ({
   interviewId,
@@ -14,9 +14,8 @@ const InterviewCard = ({
   createdAt,
 }: InterviewCardProps) => {
   const feedback = null as Feedback | null;
-  const normalizedType = /mix/gi.test(type) ? 'Mixed' : type;
-  const formattedDate = dayjs(feedback?.createdAt || createdAt || Date.now()).format('MMM D, YYYY');
-  console.log('techstack', techstack);
+  const normalizedType = /mix/gi.test(type) ? "Mixed" : type;
+  const formattedDate = dayjs(feedback?.createdAt || createdAt || Date.now()).format("MMM D, YYYY");
 
   return (
     <div className="card-border w-[360px] max-sm:w-full min-h-96">
@@ -45,7 +44,7 @@ const InterviewCard = ({
             <div className="flex flex-row gap-2">
               <Image src="/star.svg" alt="Star" width={22} height={22} />
             </div>
-            <p>{feedback?.totalScore || '---'}/100.</p>
+            <p>{feedback?.totalScore || "---"}/100.</p>
           </div>
 
           <p className="line-clamp-2 mt-5">
@@ -61,7 +60,7 @@ const InterviewCard = ({
             <Link
               href={feedback ? `/interview/${interviewId}/feedback` : `/interview/${interviewId}`}
             >
-              {feedback ? 'Check Feedback' : 'View Interview'}
+              {feedback ? "Check Feedback" : "View Interview"}
             </Link>
           </Button>
         </div>
